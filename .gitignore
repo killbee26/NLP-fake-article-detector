@@ -1,2 +1,6 @@
 data
 .venv
+
+# Large model artifacts
+models/distilbert-fakenews/model.safetensors
+models/distilbert-fakenews/model_fp32.onnx
