@@ -1,0 +1,2 @@
+1fp32: max |logit diff| vs Python = 1.4305115E-6
+_int8: max |logit diff| = 0.11277366, agreement with Python = 1.0000, accuracy = 0.9867 on 300

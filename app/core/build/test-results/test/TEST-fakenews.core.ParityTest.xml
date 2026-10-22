@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="fakenews.core.ParityTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-09T06:26:14.213Z" hostname="OMEN" time="9.652">
+  <properties/>
+  <testcase name="cleanerMatchesPython()" classname="fakenews.core.ParityTest" time="0.058"/>
+  <testcase name="distilbertFp32MatchesPython()" classname="fakenews.core.ParityTest" time="2.313"/>
+  <testcase name="tokenizerMatchesHuggingFace()" classname="fakenews.core.ParityTest" time="0.044"/>
+  <testcase name="tfidfMatchesSklearn()" classname="fakenews.core.ParityTest" time="0.148"/>
+  <testcase name="distilbertInt8AgreesWithPython()" classname="fakenews.core.ParityTest" time="7.001"/>
+  <system-out><![CDATA[fp32: max |logit diff| vs Python = 1.4305115E-6
+int8: max |logit diff| = 0.11277366, agreement with Python = 1.0000, accuracy = 0.9867 on 300
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

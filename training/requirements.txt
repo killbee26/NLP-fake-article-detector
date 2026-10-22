@@ -1,0 +1,10 @@
+# Install torch separately with CUDA: pip install torch --index-url https://download.pytorch.org/whl/cu124
+transformers
+datasets
+scikit-learn
+pandas
+pyarrow
+onnx
+onnxruntime
+accelerate
+huggingface_hub

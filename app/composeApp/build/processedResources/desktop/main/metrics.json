@@ -1,0 +1,71 @@
+{
+  "dataset": "ISOT Fake and Real News (cleaned: Reuters datelines, URLs, handles, image credits removed; subject/date dropped)",
+  "test_size": 3854,
+  "train_note": "DistilBERT fine-tuned 1 epoch on a 12k-article subset, max_len 128; TF-IDF on the full train split",
+  "latency_note": "single article, CPU, 4 threads",
+  "models": [
+    {
+      "name": "TF-IDF + Logistic Regression",
+      "accuracy": 0.986,
+      "precision_fake": 0.9895,
+      "recall_fake": 0.9793,
+      "precision_real": 0.9832,
+      "recall_real": 0.9915,
+      "f1_macro": 0.9858,
+      "confusion": [
+        [
+          1699,
+          36
+        ],
+        [
+          18,
+          2101
+        ]
+      ],
+      "size_mb": 1.2,
+      "latency_ms": 1.4
+    },
+    {
+      "name": "DistilBERT (fp32 ONNX)",
+      "accuracy": 0.9896,
+      "precision_fake": 0.9885,
+      "recall_fake": 0.9885,
+      "precision_real": 0.9906,
+      "recall_real": 0.9906,
+      "f1_macro": 0.9895,
+      "confusion": [
+        [
+          1715,
+          20
+        ],
+        [
+          20,
+          2099
+        ]
+      ],
+      "size_mb": 267.9,
+      "latency_ms": 38.7
+    },
+    {
+      "name": "DistilBERT (int8 ONNX)",
+      "accuracy": 0.9907,
+      "precision_fake": 0.9913,
+      "recall_fake": 0.9879,
+      "precision_real": 0.9901,
+      "recall_real": 0.9929,
+      "f1_macro": 0.9906,
+      "confusion": [
+        [
+          1714,
+          21
+        ],
+        [
+          15,
+          2104
+        ]
+      ],
+      "size_mb": 67.3,
+      "latency_ms": 14.9
+    }
+  ]
+}
